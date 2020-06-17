@@ -2,7 +2,7 @@ import { GetThreads } from "../core/usecase/getThreads"
 import { execSync } from "child_process"
 
 export class GetThreadsService implements GetThreads {
-    getThreads(): number {
+    public getThreads(): number {
         try {
             const command: string = "pid=$(pgrep janus); ps -o nlwp --pid $pid"
             const result: string[] = execSync(command).toString("utf-8").split("\n")
