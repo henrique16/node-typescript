@@ -5,7 +5,7 @@ import deleteSavedMedia from "./core/main/deleteSavedMedia"
 
 dotenv.config()
 const app: Express = express()
-const port = 9090
+const port = 3003
 
 app.get("/getThreads", (req, res, next) => {
     const threads: number = getThreads()
