@@ -1,7 +1,7 @@
-import { GetThreads } from "../core/usecase/getThreads"
+import { ProcessHandler } from "../interface/processHandler"
 import { execSync } from "child_process"
 
-export class GetThreadsService implements GetThreads {
+export class ChildProcessHandler implements ProcessHandler {
     public getThreads(): number {
         try {
             const command: string = "pid=$(pgrep janus); ps -o nlwp --pid $pid"
