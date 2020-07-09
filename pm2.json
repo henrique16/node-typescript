@@ -1,5 +1,5 @@
 {
     "name": "util",
-    "script": "./src/dist/index.js",
+    "script": "./dist/index.js",
     "instances": "1"
 }

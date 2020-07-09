@@ -1,12 +1,8 @@
 FROM alpine:latest
 WORKDIR /util
-COPY package*.json ./
-COPY tsconfig.json ./
-COPY pm2.json ./
+ADD . /util
 RUN apk add --update npm
 RUN npm install
 RUN npm install pm2 -g
-RUN npm install tsc -g
-RUN tsc
-COPY ./src ./src
+RUN npm run tsc
 CMD [ "pm2-runtime", "start", "pm2.json" ]

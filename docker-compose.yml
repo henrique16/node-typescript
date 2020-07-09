@@ -3,7 +3,7 @@ services:
     util:
       container_name: util
       ports:
-        - 9090:9090
+        - 3003:3003
       build:
         dockerfile: Dockerfile
         context: .
