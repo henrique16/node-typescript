@@ -1,0 +1,5 @@
+{
+    "name": "util",
+    "script": "./src/dist/index.js",
+    "instances": "1"
+}

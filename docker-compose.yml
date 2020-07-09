@@ -1,0 +1,14 @@
+version: "2.2"
+services:
+    util:
+      container_name: util
+      ports:
+        - 9090:9090
+      build:
+        dockerfile: Dockerfile
+        context: .
+      volumes:
+        - ./src:/util/src
+        - /home/raw_mjr:/home/raw_mjr
+      env_file:
+        - ./src/.env
