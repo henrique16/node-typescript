@@ -10,5 +10,6 @@ services:
       volumes:
         - ./src:/util/src
         - /home/raw_mjr:/home/raw_mjr
+        - /home/threads.txt:/home/threads.txt
       env_file:
         - ./src/.env
