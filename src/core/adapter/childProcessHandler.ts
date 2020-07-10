@@ -8,7 +8,8 @@ export class ChildProcessHandler implements ProcessHandler {
     public async getThreads(): Promise<number> {
         try {
             const result: string = fs.readFileSync(this.path, "utf-8")
-            const threads: number = parseInt(result)
+            const splited: string[] = result.split("\n")
+            const threads: number = parseInt(splited[1])
             return Promise.resolve(threads)
         }
         catch (error) {
