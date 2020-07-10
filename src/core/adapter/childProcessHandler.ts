@@ -1,9 +1,12 @@
 import { ProcessHandler } from "../interface/processHandler"
-import { execSync } from "child_process"
 import fs from "fs"
 
 export class ChildProcessHandler implements ProcessHandler {
-    public path: string = process.env.THREADS_FILE ? process.env.THREADS_FILE : ""
+    private path: string
+
+    public constructor(path: string) {
+        this.path = path
+    }
 
     public async getThreads(): Promise<number> {
         try {

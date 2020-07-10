@@ -1,5 +1,6 @@
 import { getThreads } from "../useCaseBuilder/getThreads"
 
 export default function () {
-    return getThreads()
+    const path: string = process.env.THREADS_FILE ? process.env.THREADS_FILE : ""
+    return getThreads(path)
 }
