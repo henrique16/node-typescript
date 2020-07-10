@@ -1,6 +1,6 @@
 FROM alpine:latest
 WORKDIR /util
-ADD . /uti
+ADD . /util
 RUN apk --no-cache add procps
 RUN apk add --update npm
 RUN npm install
