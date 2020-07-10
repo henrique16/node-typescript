@@ -7,7 +7,7 @@ export class GetThreads {
         this.processHandler = processHandler
     }
 
-    get(): number {
+    get(): Promise<number> {
         return this.processHandler.getThreads()
     }
 }

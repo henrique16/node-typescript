@@ -1,3 +1,3 @@
 export interface ProcessHandler {
-    getThreads(): number
+    getThreads(): Promise<number>
 }

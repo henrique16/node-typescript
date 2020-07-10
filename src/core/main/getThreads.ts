@@ -1,5 +1,5 @@
 import { getThreads } from "../useCaseBuilder/getThreads"
 
-export default function (): number {
+export default function () {
     return getThreads()
 }
