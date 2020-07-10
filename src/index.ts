@@ -7,9 +7,10 @@ dotenv.config()
 const app: Express = express()
 const port = 3003
 
-app.get("/getThreads", (req, res, next) => {
-    const threads: number = getThreads()
-    res.status(200).send({ threads: threads })
+app.get("/getThreads", async (req, res, next) => {
+    getThreads()
+        .then((threads: number) => res.status(200).send({ threads: threads }))
+        .catch(error => res.status(500).send({ error: error }))
 })
 
 app.delete("/deleteSavedMedia", (req, res, next) => {
